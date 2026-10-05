@@ -4,7 +4,8 @@
 :root {
   --primary-bg-color: #f7fbfd;
   --primary-accent: #0c1618;
-  --secondary-accent: #6f1d1b;
+  --secondary-accent: #C6185C
+;
 
   --main-text-color: #0c1618;
   --supportive-text-color: #242d2f;
@@ -292,6 +293,7 @@ h5 {
   line-height: 1.7;
   font-weight: 400;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .skill {
@@ -414,6 +416,7 @@ h5 {
   transform: scale(1);
   width: 100%;
   transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  object-fit: cover;
 }
 
 .project-mask {
@@ -427,6 +430,7 @@ h5 {
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
+  
 }
 
 .project-mask p {
