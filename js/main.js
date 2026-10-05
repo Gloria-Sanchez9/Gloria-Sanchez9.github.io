@@ -1,6 +1,7 @@
 "use strict";
 import form from "./form.js";
 import skillbar from "./skillbar.js";
+import { applyLang, getLang, t } from "./i18n.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
@@ -12,6 +13,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("#nav");
   const navBtn = document.querySelector("#nav-btn");
   const navBtnImg = document.querySelector("#nav-btn-img");
+
+  // Dark mode
+  const themeToggle = document.querySelector("#theme-toggle");
+  const root = document.documentElement;
+
+  const updateToggleLabel = () => {
+    const isDark = root.getAttribute("data-theme") === "dark";
+    themeToggle.setAttribute("aria-label", t(isDark ? "theme.toLight" : "theme.toDark"));
+  };
+  // Idioma (español / inglés)
+  const langToggle = document.querySelector("#lang-toggle");
+  applyLang(getLang());
+  langToggle.addEventListener("click", () => {
+    applyLang(getLang() === "es" ? "en" : "es");
+    updateToggleLabel();
+  });
+
+  updateToggleLabel();
+
+  themeToggle.addEventListener("click", () => {
+    const isDark = root.getAttribute("data-theme") === "dark";
+    if (isDark) {
+      root.removeAttribute("data-theme");
+    } else {
+      root.setAttribute("data-theme", "dark");
+    }
+    try {
+      localStorage.setItem("theme", isDark ? "light" : "dark");
+    } catch (e) {}
+    updateToggleLabel();
+  });
 
   //Hamburger menu
   navBtn.onclick = () => {

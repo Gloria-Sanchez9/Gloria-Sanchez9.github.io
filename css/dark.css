@@ -1,0 +1,170 @@
+/* =========================================
+   Dark mode
+   Se activa con <html data-theme="dark">
+   ========================================= */
+
+/* Botón para cambiar de tema */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--main-text-color);
+  background: transparent;
+  color: var(--main-text-color);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--secondary-accent);
+  border-color: var(--secondary-accent);
+  color: #fff;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Botón de idioma (ES / EN) */
+.lang-toggle {
+  height: 40px;
+  min-width: 48px;
+  padding: 0 12px;
+  border-radius: 20px;
+  border: 1.5px solid var(--main-text-color);
+  background: transparent;
+  color: var(--main-text-color);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.lang-toggle:hover {
+  background-color: var(--secondary-accent);
+  border-color: var(--secondary-accent);
+  color: #fff;
+}
+
+/* En modo claro se ve la luna, en oscuro el sol */
+.theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Transición suave al cambiar de tema */
+body,
+.hero,
+.projects,
+.footer,
+.header-sticky {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--body-bg, #fff);
+}
+
+/* ---------- Paleta oscura ---------- */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --body-bg: #0f1315;
+  --primary-bg-color: #161c1f;
+  --primary-accent: #e8eef0;
+  --secondary-accent: #e2457f;
+
+  --main-text-color: #e8eef0;
+  --supportive-text-color: #c9d1d4;
+  --gray-text-color: #a3abae;
+
+  --gray-color: #2a3236;
+  --gray-color-2: #3a4448;
+  --gray-color-3: #c9d1d4;
+
+  --color-preloader-bg: #0f1315;
+  --color-dots: #e8eef0;
+}
+
+/* Botones: fondo claro con texto oscuro */
+[data-theme="dark"] .btn {
+  color: #0f1315;
+}
+[data-theme="dark"] .btn:hover,
+[data-theme="dark"] .btn:focus {
+  color: #fff;
+}
+[data-theme="dark"] .btn-white {
+  color: var(--primary-accent);
+}
+[data-theme="dark"] .btn-white:hover,
+[data-theme="dark"] .btn-white:focus {
+  color: #0f1315;
+}
+
+/* Header fijo */
+[data-theme="dark"] .header-sticky {
+  background-color: rgba(15, 19, 21, 0.95);
+}
+
+/* Iconos (son SVG oscuros, se aclaran con filtro) */
+[data-theme="dark"] .social-links-row a {
+  filter: invert(85%) sepia(5%) saturate(200%) hue-rotate(160deg) brightness(95%);
+}
+[data-theme="dark"] .social-links-row a:hover {
+  filter: invert(100%);
+}
+[data-theme="dark"] .service-card-img {
+  filter: invert(90%) sepia(5%) saturate(200%) hue-rotate(160deg);
+}
+[data-theme="dark"] #nav-btn-img {
+  filter: invert(100%);
+}
+
+/* Footer */
+[data-theme="dark"] .footer {
+  background-color: #0a0d0e;
+  border-top: 1px solid var(--gray-color);
+}
+
+/* Formulario */
+[data-theme="dark"] .contact form .input-box input,
+[data-theme="dark"] .contact form textarea {
+  background-color: var(--primary-bg-color);
+  color: var(--main-text-color);
+}
+
+/* Botón "ir arriba" */
+[data-theme="dark"] .goToTop a {
+  filter: invert(100%);
+}
+
+/* Menú móvil */
+@media (max-width: 977px) {
+  .header-actions {
+    gap: 12px;
+  }
+  .theme-toggle {
+    margin-right: 56px;
+  }
+
+  [data-theme="dark"] .nav.open .nav-list {
+    background-color: var(--body-bg);
+  }
+  [data-theme="dark"] .nav-link {
+    color: var(--gray-text-color);
+  }
+  [data-theme="dark"] .nav-link.active {
+    color: var(--main-text-color);
+  }
+}

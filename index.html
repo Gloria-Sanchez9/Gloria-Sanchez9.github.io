@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,22 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/dark.css" />
+    <script>
+      // Aplica el tema guardado antes de pintar la página (evita parpadeo)
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem("theme"); } catch (e) {}
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+        var lang = null;
+        try { lang = localStorage.getItem("lang"); } catch (e) {}
+        if (!lang) lang = (navigator.language || "es").slice(0, 2) === "es" ? "es" : "en";
+        document.documentElement.setAttribute("lang", lang);
+      })();
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -20,26 +36,27 @@
     <header id="header" class="header">
       <div class="container container-lg">
         <div class="header-nav">
-          <a
+          <a data-i18n="nav.logo"
             href="#home"
             class="logo"
             data-aos="fade-down"
             data-aos-duration="1000"
             >Portafolio</a
           >
+          <div class="header-actions">
           <nav id="nav" class="nav">
             <ul class="nav-list" data-aos="fade-down" data-aos-duration="1000">
               <li class="nav-item">
-                <a href="#home" class="nav-link active">Inicio</a>
+                <a data-i18n="nav.home" href="#home" class="nav-link active">Inicio</a>
               </li>
               <li class="nav-item">
-                <a href="#about" class="nav-link">Sobre mi</a>
+                <a data-i18n="nav.about" href="#about" class="nav-link">Sobre mi</a>
               </li>
               <li class="nav-item">
-                <a href="#projects" class="nav-link">Trabajos</a>
+                <a data-i18n="nav.projects" href="#projects" class="nav-link">Trabajos</a>
               </li>
               <li class="nav-item">
-                <a href="#contact" class="nav-link">Contacto</a>
+                <a data-i18n="nav.contact" href="#contact" class="nav-link">Contacto</a>
               </li>
             </ul>
             <button id="nav-btn" class="nav-btn">
@@ -50,6 +67,29 @@
               />
             </button>
           </nav>
+          <button
+            id="lang-toggle"
+            class="lang-toggle"
+            type="button"
+            aria-label="View in English"
+            title="View in English"
+          >EN</button>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar a modo oscuro"
+            title="Cambiar tema"
+          >
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+          </button>
+          </div>
         </div>
       </div>
     </header>
@@ -64,10 +104,10 @@
           data-aos-duration="1000"
         >
           <div class="hero-content">
-            <span class="hero-greeting"> Hola, Yo soy</span>
+            <span data-i18n="hero.greeting" class="hero-greeting"> Hola, Yo soy</span>
             <h1 class="hero-heading">Gloria Sánchez</h1>
             <span class="hero-heading-subtitle"
-              >Ingeniera en Sistemas (en progreso)
+              ><span data-i18n="hero.subtitle">Ingeniera en Sistemas (en progreso)</span>
             <div class="about-social-list">
               <div class="social-links-row">
                 <a href="https://github.com/Gloria-Sanchez9">
@@ -92,8 +132,8 @@
             </div>
 
             <div>
-              <a href="#projects" class="btn">Mi Portafolio</a>
-              <a href="#contact" class="btn btn-white">Contacto</a>
+              <a data-i18n="hero.portfolioBtn" href="#projects" class="btn">Mi Portafolio</a>
+              <a data-i18n="nav.contact" href="#contact" class="btn btn-white">Contacto</a>
             </div>
           </div>
           <div class="hero-img">
@@ -110,19 +150,50 @@
     <section id="about" class="about">
       <div class="container">
         <div class="about-title">
-          <h2 class="title">Sobre mi</h2>
+          <h2 data-i18n="nav.about" class="title">Sobre mi</h2>
         </div>
-        <div class="about-row">
-          <div
+
+        <div
             class="about-content"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <p class="about-descr">
+            <p data-i18n="about.descr" class="about-descr">
               ¡Hola! Soy Gloria, estudiante de Ingeniería en Sistemas de la Información. Me encanta combinar la programación con la creatividad: desde páginas web hasta videojuegos e instalaciones interactivas para niños. Con ELOA Dev Team he desarrollado sitios web e integrado juegos de Unity para la web. Me gusta aprender participando en game jams, hackatones y proyectos de investigación sobre interacción humano-computadora.
             </p>
             <div class="about-download-btn">
-              <a href="#!" class="btn btn-white">Descargar CV</a>
+              <a data-i18n="about.cv" href="#!" class="btn btn-white">Descargar CV</a>
+            </div>
+          </div>
+          <br>
+
+          <div class="about-row">
+          <div
+            class="about-skills"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <div class="skill">
+              <div data-i18n="skills.english" class="skill-title">Dominancia del Idioma Inglés</div>
+              <div class="skill-percent">B2</div>
+              <div class="skill-bar__progress">
+                <div class="skill-bar__fill" data-progress="67" data-label="true"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div data-i18n="skills.french" class="skill-title">Frances</div>
+              <div class="skill-percent">A1</div>
+              <div class="skill-bar__progress">
+                <div class="skill-bar__fill" data-progress="17" data-label="true"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill-title">Kumon</div>
+              <div data-i18n="skills.kumonLevel" class="skill-percent">Nivel K</div>
+              <div class="skill-bar__progress">
+                <div class="skill-bar__fill" data-progress="80" data-label="true"></div>
+              </div>
             </div>
           </div>
           <div
@@ -183,8 +254,8 @@
             data-aos-delay="50"
           >
             <img class="service-card-img" src="img/services/01.svg" alt="" />
-            <h3 class="service-card-title">Trabajo en equipo</h3>
-            <p>
+            <h3 data-i18n="services.teamwork.title" class="service-card-title">Trabajo en equipo</h3>
+            <p data-i18n="services.teamwork.text">
              Divido los proyectos en tareas claras y priorizo para cumplir con los tiempos de entrega. Conozco metodologías ágiles como Scrum para organizar el trabajo en equipo.
             </p>
           </div>
@@ -196,8 +267,8 @@
             data-aos-delay="200"
           >
             <img class="service-card-img" src="img/services/02.png" alt="" />
-            <h3 class="service-card-title">Comunicación</h3>
-            <p>
+            <h3 data-i18n="services.communication.title" class="service-card-title">Comunicación</h3>
+            <p data-i18n="services.communication.text">
               Puedo explicar ideas técnicas de manera sencilla, tanto a mi equipo como a personas sin conocimientos de programación. Tengo experiencia presentando proyectos y exposiciones en clase.
             </p>
           </div>
@@ -209,8 +280,8 @@
             data-aos-delay="500"
           >
             <img class="service-card-img" src="img/services/03.svg" alt="" />
-            <h3 class="service-card-title">Organización</h3>
-            <p>
+            <h3 data-i18n="services.organization.title" class="service-card-title">Organización</h3>
+            <p data-i18n="services.organization.text">
               Divido los proyectos en tareas claras y priorizo para cumplir con los tiempos de entrega. Conozco metodologías ágiles como Scrum para organizar el trabajo en equipo.
             </p>
           </div>
@@ -221,7 +292,7 @@
     <section id="projects" class="projects">
       <div class="container container-lg">
         <div class="projects-title">
-          <h2 class="title">Trabajos</h2>
+          <h2 data-i18n="nav.projects" class="title">Trabajos</h2>
         </div>
 
         <div class="projects-row">
@@ -235,11 +306,11 @@
               <img class="project-img" src="img/works/01.png" alt="Página Web ELOA" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Página Web "ELOA"</h5>
-                  <p class="white">Desarrollo Web</p>
+                  <h5 data-i18n="projects.eloa" class="white">Página Web "ELOA"</h5>
+                  <p data-i18n="projects.cat.web" class="white">Desarrollo Web</p>
                   <div class="project-buttons">
-                    <a href="https://eloadev.github.io/proyects/" target="_blank" class="project-btn">Ver demo</a>
-                    <a href="https://github.com/Gloria-Sanchez9/proyects/blob/main/docs/Inicio" target="_blank" class="project-btn">Ver repositorio</a>
+                    <a data-i18n="projects.demo" href="https://eloadev.github.io/proyects/" target="_blank" class="project-btn">Ver demo</a>
+                    <a data-i18n="projects.repo" href="https://github.com/Gloria-Sanchez9/proyects/blob/main/docs/Inicio" target="_blank" class="project-btn">Ver repositorio</a>
                   </div>
                 </div>
               </div>
@@ -255,11 +326,11 @@
               <img class="project-img" src="img/works/02.png" alt="Página Web ELOA" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Juego Interactivo "Weavy"</h5>
-                  <p class="white">Desarrollo de Videojuegos</p>
+                  <h5 data-i18n="projects.weavy" class="white">Juego Interactivo "Weavy"</h5>
+                  <p data-i18n="projects.cat.games" class="white">Desarrollo de Videojuegos</p>
                   <div class="project-buttons">
-                    <a href="https://eloadev.github.io/proyects/Weavy/inicioWeavy/" target="_blank" class="project-btn">Ver demo</a>
-                    <a href="https://github.com/Gloria-Sanchez9/proyects/tree/main/docs/weavy" target="_blank" class="project-btn">Ver repositorio</a>
+                    <a data-i18n="projects.demo" href="https://eloadev.github.io/proyects/Weavy/inicioWeavy/" target="_blank" class="project-btn">Ver demo</a>
+                    <a data-i18n="projects.repo" href="https://github.com/Gloria-Sanchez9/proyects/tree/main/docs/weavy" target="_blank" class="project-btn">Ver repositorio</a>
                   </div>
                 </div>
               </div>
@@ -275,11 +346,11 @@
               <img class="project-img" src="img/works/03.png" alt="Página Web ELOA" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Página Web "Party Problems"</h5>
-                  <p class="white">Desarrollo Web</p>
+                  <h5 data-i18n="projects.party" class="white">Página Web "Party Problems"</h5>
+                  <p data-i18n="projects.cat.web" class="white">Desarrollo Web</p>
                   <div class="project-buttons">
-                    <a href="https://eloadev.github.io/proyects/party-problems/inicioParty/" target="_blank" class="project-btn">Ver demo</a>
-                    <a href="https://github.com/Gloria-Sanchez9/proyects/tree/main/docs/party-problems" target="_blank" class="project-btn">Ver repositorio</a>
+                    <a data-i18n="projects.demo" href="https://eloadev.github.io/proyects/party-problems/inicioParty/" target="_blank" class="project-btn">Ver demo</a>
+                    <a data-i18n="projects.repo" href="https://github.com/Gloria-Sanchez9/proyects/tree/main/docs/party-problems" target="_blank" class="project-btn">Ver repositorio</a>
                   </div>
                 </div>
               </div>
@@ -295,11 +366,11 @@
               <img class="project-img" src="img/works/04.png" alt="Página Web ELOA" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Página Web "Calculadoras"</h5>
-                  <p class="white">Desarrollo Web</p>
+                  <h5 data-i18n="projects.calc" class="white">Página Web "Calculadoras"</h5>
+                  <p data-i18n="projects.cat.web" class="white">Desarrollo Web</p>
                   <div class="project-buttons">
-                    <a href="https://eloadev.github.io/proyects/Calculadoras/calculadoras/" target="_blank" class="project-btn">Ver demo</a>
-                    <a href="https://github.com/Gloria-Sanchez9/proyects/tree/main/docs/calculadoras" target="_blank" class="project-btn">Ver repositorio</a>
+                    <a data-i18n="projects.demo" href="https://eloadev.github.io/proyects/Calculadoras/calculadoras/" target="_blank" class="project-btn">Ver demo</a>
+                    <a data-i18n="projects.repo" href="https://github.com/Gloria-Sanchez9/proyects/tree/main/docs/calculadoras" target="_blank" class="project-btn">Ver repositorio</a>
                   </div>
                 </div>
               </div>
@@ -316,10 +387,10 @@
               <img class="project-img" src="img/works/05.png" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Interfaz Menú Restaurante</h5>
-                  <p class="white">Diseño UI/UX</p>
+                  <h5 data-i18n="projects.restaurant" class="white">Interfaz Menú Restaurante</h5>
+                  <p data-i18n="projects.cat.uiux" class="white">Diseño UI/UX</p>
                   <div class="project-buttons">
-                    <a href="https://www.figma.com/proto/hLBbGG0IepyrHifwiDn2h3/Restaurante?node-id=0-1&t=q6BryCgxKiq3QFhA-1" target="_blank" class="project-btn">Ver Prototipo en Figma</a>
+                    <a data-i18n="projects.figma" href="https://www.figma.com/proto/hLBbGG0IepyrHifwiDn2h3/Restaurante?node-id=0-1&t=q6BryCgxKiq3QFhA-1" target="_blank" class="project-btn">Ver Prototipo en Figma</a>
                   </div>
                 </div>
               </div>
@@ -336,10 +407,10 @@
               <img class="project-img" src="img/works/06.png" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Interfaz Sistema Abarrotes</h5>
-                  <p class="white">Diseño UI/UX</p>
+                  <h5 data-i18n="projects.grocery" class="white">Interfaz Sistema Abarrotes</h5>
+                  <p data-i18n="projects.cat.uiux" class="white">Diseño UI/UX</p>
                   <div class="project-buttons">
-                    <a href="https://www.figma.com/proto/LYVO0SF4tuYeSG4Yfx4W9v/Sistema-Abarrotes?node-id=0-1&t=JloAXK70Gy7NFgtz-1" target="_blank" class="project-btn">Ver Prototipo en Figma</a>
+                    <a data-i18n="projects.figma" href="https://www.figma.com/proto/LYVO0SF4tuYeSG4Yfx4W9v/Sistema-Abarrotes?node-id=0-1&t=JloAXK70Gy7NFgtz-1" target="_blank" class="project-btn">Ver Prototipo en Figma</a>
                   </div>
                 </div>
               </div>
@@ -352,11 +423,11 @@
     <section id="contact" class="contact">
       <div class="container">
         <div class="contact-title">
-          <h2 class="title">Contact</h2>
+          <h2 class="title" data-i18n="nav.contact">Contacto</h2>
         </div>
         <div class="contact-content">
-          <strong><p>
-            Correo:</strong>
+          <p>
+            <strong data-i18n="contact.email">Correo:</strong>
             gloriasan@gmail.com
           </p>
         </div>

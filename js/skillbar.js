@@ -6,6 +6,10 @@ const skillbar = () => {
     const progress = parseInt(fill.getAttribute("data-progress"), 10);
     fill.style.width = `${progress}%`;
 
+    // Si la barra tiene data-label (ej. B2, A1, Nivel K), se deja ese texto
+    // tal cual en lugar de mostrar el porcentaje.
+    if (fill.hasAttribute("data-label")) return;
+
     let counter = 0;
     const interval = setInterval(() => {
       if (counter <= progress) {
