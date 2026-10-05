@@ -4,7 +4,7 @@ Mi portafolio personla, donde muestro los proyectos que eh desarrollado como est
 
 **Ver en línea:** https://gloria-sanchez9.github.io 
 
-![Project Preview](portfolio_preview.png)
+![Vista previa](img/portfolio_preview.png)
 
 
 ## Contenido
