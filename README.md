@@ -1,6 +1,6 @@
 # Portafolio de Gloria Sánchez
 
-Mi portafolio personla, donde muestro los proyectos que eh desarrollado como estudiante de Ingienería en Sistemas de la Información en la Universidad de Sonora. 
+Mi portafolio personal, donde muestro los proyectos que he desarrollado como estudiante de Ingeniería en Sistemas de la Información en la Universidad de Sonora. 
 
 **Ver en línea:** https://gloria-sanchez9.github.io 
 
@@ -11,7 +11,8 @@ Mi portafolio personla, donde muestro los proyectos que eh desarrollado como est
 
 - Sobre mí
 - Habilidades técnicas y blandas
-- Proyectos 
+- Proyectos
+- Blog
 - Contacto
 
 ## Herramientas
@@ -19,7 +20,7 @@ Mi portafolio personla, donde muestro los proyectos que eh desarrollado como est
 - HTML
 - CSS
 - JavaScript
-- GitHUb Pages
+- GitHub Pages
 
 ## Créditos
 

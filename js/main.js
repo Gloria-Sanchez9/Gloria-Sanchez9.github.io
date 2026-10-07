@@ -1,14 +1,14 @@
 "use strict";
-import form from "./form.js";
 import skillbar from "./skillbar.js";
+import blog from "./blog.js";
 import { applyLang, getLang, t } from "./i18n.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     once: true,
   });
-  form();
   skillbar();
+  blog();
 
   const nav = document.querySelector("#nav");
   const navBtn = document.querySelector("#nav-btn");

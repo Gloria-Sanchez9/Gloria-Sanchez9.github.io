@@ -1,0 +1,217 @@
+/* =========================================
+   Blog
+   ========================================= */
+.blog {
+  padding: 7rem 0;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--gray-color);
+  border-top: 3px solid var(--secondary-accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(12, 22, 24, 0.08);
+}
+
+.blog-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.blog-tag {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--secondary-accent);
+}
+
+.blog-date {
+  font-size: 13px;
+  color: var(--gray-text-color);
+}
+
+.blog-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  color: var(--main-text-color);
+}
+
+.blog-card-excerpt {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--supportive-text-color);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.blog-read {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--main-text-color);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-accent);
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 7px;
+  transition: color 0.3s;
+}
+
+.blog-read:hover,
+.blog-read:focus-visible {
+  color: var(--secondary-accent);
+}
+
+.blog-read-arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.blog-read:hover .blog-read-arrow {
+  transform: translateX(4px);
+}
+
+.blog-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--gray-text-color);
+}
+
+/* Ventana para leer la entrada completa */
+.blog-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.blog-modal[hidden] {
+  display: none;
+}
+
+.blog-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 48px 44px 40px;
+  background-color: var(--body-bg, #fff);
+  color: var(--main-text-color);
+  border-top: 3px solid var(--secondary-accent);
+  animation: blog-modal-in 0.3s ease;
+}
+
+@keyframes blog-modal-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blog-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--main-text-color);
+  background: transparent;
+  color: var(--main-text-color);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.blog-modal-close:hover {
+  background-color: var(--secondary-accent);
+  border-color: var(--secondary-accent);
+  color: #fff;
+}
+
+.blog-modal-content .blog-card-meta {
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.blog-modal-title {
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 24px;
+  padding-right: 32px;
+}
+
+.blog-modal-body p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--supportive-text-color);
+  margin-bottom: 16px;
+}
+
+body.blog-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .blog {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 977px) {
+  .blog {
+    padding: 5rem 0;
+  }
+  .blog-modal-content {
+    padding: 56px 24px 32px;
+  }
+}
+
+@media (max-width: 406px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Correo en la sección de contacto */
+.contact-content a {
+  color: var(--main-text-color);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-accent);
+  text-underline-offset: 5px;
+}
+
+.contact-content a:hover {
+  color: var(--secondary-accent);
+}

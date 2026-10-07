@@ -7,6 +7,7 @@ export const translations = {
     "nav.home": "Inicio",
     "nav.about": "Sobre mi",
     "nav.projects": "Trabajos",
+    "nav.blog": "Blog",
     "nav.contact": "Contacto",
     "hero.greeting": "Hola, Yo soy",
     "hero.subtitle": "Ingeniera en Sistemas (en progreso)",
@@ -48,6 +49,7 @@ export const translations = {
     "nav.home": "Home",
     "nav.about": "About me",
     "nav.projects": "Projects",
+    "nav.blog": "Blog",
     "nav.contact": "Contact",
     "hero.greeting": "Hi, I'm",
     "hero.subtitle": "Systems Engineer (in progress)",
@@ -103,4 +105,6 @@ export const applyLang = (lang) => {
     btn.setAttribute("title", translations[lang]["lang.switch"]);
   }
   try { localStorage.setItem("lang", lang); } catch (e) {}
+  // Avisa a otras partes de la página (como el blog) que cambió el idioma
+  document.dispatchEvent(new CustomEvent("langchange", { detail: lang }));
 };
