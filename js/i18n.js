@@ -5,12 +5,17 @@ export const translations = {
   es: {
     "nav.logo": "Portafolio",
     "nav.home": "Inicio",
-    "nav.about": "Sobre mi",
+    "nav.about": "Sobre mí",
     "nav.projects": "Trabajos",
     "nav.blog": "Blog",
     "nav.contact": "Contacto",
     "hero.greeting": "Hola, Yo soy",
-    "hero.subtitle": "Ingeniera en Sistemas (en progreso)",
+    "hero.subtitle": "Desarrolladora Web Frontend",
+    "about.education": "Educación",
+    "about.techSkills": "Habilidades técnicas",
+    "about.softSkills": "Habilidades blandas",
+    "edu.degree": "Ingeniería en Sistemas de la Información",
+    "edu.dates": "2024 – presente",
     "hero.portfolioBtn": "Mi Portafolio",
     "about.descr":
       "¡Hola! Soy Gloria, estudiante de Ingeniería en Sistemas de la Información. Me encanta combinar la programación con la creatividad: desde páginas web hasta videojuegos e instalaciones interactivas para niños. Con ELOA Dev Team he desarrollado sitios web e integrado juegos de Unity para la web. Me gusta aprender participando en game jams, hackatones y proyectos de investigación sobre interacción humano-computadora.",
@@ -20,7 +25,7 @@ export const translations = {
     "skills.kumonLevel": "Nivel K",
     "services.teamwork.title": "Trabajo en equipo",
     "services.teamwork.text":
-      "Divido los proyectos en tareas claras y priorizo para cumplir con los tiempos de entrega. Conozco metodologías ágiles como Scrum para organizar el trabajo en equipo.",
+      "Me gusta colaborar y aprender de otros. Con ELOA Dev Team trabajé con Git y GitHub usando ramas y pull requests, y he participado en game jams y hackatones donde cada integrante aporta su parte a un mismo proyecto.",
     "services.communication.title": "Comunicación",
     "services.communication.text":
       "Puedo explicar ideas técnicas de manera sencilla, tanto a mi equipo como a personas sin conocimientos de programación. Tengo experiencia presentando proyectos y exposiciones en clase.",
@@ -52,7 +57,12 @@ export const translations = {
     "nav.blog": "Blog",
     "nav.contact": "Contact",
     "hero.greeting": "Hi, I'm",
-    "hero.subtitle": "Systems Engineer (in progress)",
+    "hero.subtitle": "Frontend Web Developer",
+    "about.education": "Education",
+    "about.techSkills": "Technical skills",
+    "about.softSkills": "Soft skills",
+    "edu.degree": "B.S. in Information Systems Engineering",
+    "edu.dates": "2024 – present",
     "hero.portfolioBtn": "My Portfolio",
     "about.descr":
       "Hi! I'm Gloria, an Information Systems Engineering student. I love combining programming with creativity: from websites to video games and interactive installations for kids. With ELOA Dev Team I've built websites and integrated Unity games for the web. I like learning by taking part in game jams, hackathons and research projects on human-computer interaction.",
@@ -62,7 +72,7 @@ export const translations = {
     "skills.kumonLevel": "Level K",
     "services.teamwork.title": "Teamwork",
     "services.teamwork.text":
-      "I break projects down into clear tasks and prioritize to meet deadlines. I'm familiar with agile methodologies like Scrum to organize teamwork.",
+      "I enjoy collaborating and learning from others. With ELOA Dev Team I worked with Git and GitHub using branches and pull requests, and I've taken part in game jams and hackathons where each member contributes their part to a shared project.",
     "services.communication.title": "Communication",
     "services.communication.text":
       "I can explain technical ideas in a simple way, both to my team and to people with no programming background. I have experience presenting projects and giving talks in class.",
