@@ -19,9 +19,9 @@ const posts = [
       tag: "Diseño UI/UX",
       title: "Interfaz de Sistema para Abarrotes “El Buen Precio”",
       excerpt:
-        "Prototipo en Figma de un sistema punto de venta para una tienda de abarrotes, pensado para que el cajero trabaje rápido.",
+        "Diseño en Figma de la interfaz de un sistema punto de venta para una tienda de abarrotes, pensado para que el cajero trabaje rápido.",
       description: [
-        "“El Buen Precio” es el prototipo de un sistema punto de venta para una tienda de abarrotes. Desde una sola pantalla de inicio, el cajero puede buscar productos, registrar ventas, hacer la apertura y el corte de caja, y generar facturas.",
+        "“El Buen Precio” es el diseño de la interfaz de un sistema punto de venta para una tienda de abarrotes. Su pantalla de inicio reúne en un solo lugar las acciones principales del cajero: buscar productos, registrar ventas, hacer la apertura y el corte de caja, y generar facturas.",
       ],
       requirements: [
         "La tienda necesitaba una herramienta sencilla para el día a día en la caja: iniciar sesión según el rol del usuario (por ejemplo, cajero), buscar productos y consultar sus precios, registrar una venta nueva, hacer la apertura y el corte de caja al inicio y fin del turno, y facturar.",
@@ -32,20 +32,20 @@ const posts = [
         "Usé colores cálidos (amarillo y verde) con imágenes de frutas y verduras para relacionar el sistema con la tienda, y destaqué con color las acciones principales: “Buscar producto” y “Nueva venta”. En la parte superior siempre se ve el usuario con su rol y el botón para cerrar sesión.",
       ],
       implementation: [
-        "El prototipo lo construí en Figma: diseñé cada pantalla con marcos (frames) y componentes reutilizables para los botones e íconos, y después las conecté en el modo Prototipo para simular la navegación del sistema.",
-        "Así se puede probar el flujo completo haciendo clic, como si fuera la aplicación real, sin escribir código.",
+        "El diseño lo hice en Figma: armé las pantallas con marcos (frames) y usé componentes reutilizables para los botones e íconos, para que todo tuviera el mismo estilo.",
+        "Por ahora es un diseño visual (mockup): los botones todavía no están conectados entre sí, así que el prototipo no se puede navegar haciendo clic. El siguiente paso sería enlazarlos en el modo Prototipo de Figma o programar la interfaz.",
       ],
       result: [
-        "El resultado es un prototipo interactivo que muestra cómo funcionaría el sistema completo antes de programarlo. Sirve para validar el diseño con los usuarios y como guía para el desarrollo.",
+        "El resultado es el diseño de la interfaz del sistema, que muestra cómo se vería y cómo estarían organizadas las funciones antes de programarlo. Sirve para revisar el diseño con los usuarios y como guía para el desarrollo.",
       ],
     },
     en: {
       tag: "UI/UX Design",
       title: "“El Buen Precio” Grocery Store System Interface",
       excerpt:
-        "Figma prototype of a point-of-sale system for a grocery store, designed so the cashier can work fast.",
+        "Figma design of the interface for a grocery store point-of-sale system, designed so the cashier can work fast.",
       description: [
-        "“El Buen Precio” is a prototype of a point-of-sale system for a grocery store. From a single home screen, the cashier can search for products, register sales, open and close the cash register, and issue invoices.",
+        "“El Buen Precio” is the interface design for a grocery store point-of-sale system. Its home screen gathers the cashier's main actions in one place: searching for products, registering sales, opening and closing the cash register, and issuing invoices.",
       ],
       requirements: [
         "The store needed a simple tool for day-to-day work at the register: log in according to the user's role (for example, cashier), search products and check their prices, register a new sale, open and close the register at the start and end of each shift, and issue invoices.",
@@ -56,11 +56,11 @@ const posts = [
         "I used warm colors (yellow and green) with images of fruits and vegetables to connect the system with the store, and highlighted the main actions with color: “Search product” and “New sale”. The top bar always shows the user, their role and the log-out button.",
       ],
       implementation: [
-        "I built the prototype in Figma: I designed each screen with frames and reusable components for buttons and icons, and then connected them in Prototype mode to simulate the system's navigation.",
-        "This way the whole flow can be tested by clicking, as if it were the real app, without writing code.",
+        "I made the design in Figma: I built the screens with frames and used reusable components for buttons and icons so everything shares the same style.",
+        "For now it is a visual design (mockup): the buttons are not linked yet, so the prototype can't be navigated by clicking. The next step would be to link them in Figma's Prototype mode or to code the interface.",
       ],
       result: [
-        "The result is an interactive prototype that shows how the full system would work before programming it. It helps validate the design with users and serves as a guide for development.",
+        "The result is the system's interface design, showing how it would look and how its features would be organized before programming it. It helps review the design with users and serves as a guide for development.",
       ],
     },
   },
@@ -122,7 +122,7 @@ const ui = {
     readMore: "Leer más",
     close: "Cerrar",
     empty: "Pronto habrá nuevas entradas.",
-    prototype: "Ver prototipo en Figma",
+    prototype: "Ver en Figma",
     sections: {
       description: "Descripción",
       requirements: "Requerimientos del cliente",
@@ -135,7 +135,7 @@ const ui = {
     readMore: "Read more",
     close: "Close",
     empty: "New posts coming soon.",
-    prototype: "View Figma prototype",
+    prototype: "View in Figma",
     sections: {
       description: "Description",
       requirements: "Client requirements",
