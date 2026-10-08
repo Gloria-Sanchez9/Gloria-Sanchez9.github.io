@@ -20,7 +20,7 @@ export const translations = {
     "about.descr":
       "¡Hola! Soy Gloria, estudiante de Ingeniería en Sistemas de la Información. Me encanta combinar la programación con la creatividad: desde páginas web hasta videojuegos e instalaciones interactivas para niños. Con ELOA Dev Team he desarrollado sitios web e integrado juegos de Unity para la web. Me gusta aprender participando en game jams, hackatones y proyectos de investigación sobre interacción humano-computadora.",
     "about.cv": "Descargar CV",
-    "skills.english": "Dominancia del Idioma Inglés",
+    "skills.english": "Idioma Inglés",
     "skills.french": "Frances",
     "skills.kumonLevel": "Nivel K",
     "services.teamwork.title": "Trabajo en equipo",
