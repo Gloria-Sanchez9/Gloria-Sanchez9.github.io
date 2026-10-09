@@ -1,13 +1,4 @@
-// =========================================
-//  Blog
-//  Aquí van los proyectos que no tienen repositorio (por ejemplo, los
-//  prototipos de Figma). Para agregar uno nuevo, copia uno de los objetos
-//  de "posts" y cambia sus datos.
-//  - date (opcional): formato "AAAA-MM-DD"; las entradas se muestran en el orden de esta lista
-//  - image: imagen de portada
-//  - link: enlace al prototipo (opcional)
-//  - es / en: textos en cada idioma. Cada apartado es un arreglo de párrafos.
-// =========================================
+
 import { getLang } from "./i18n.js";
 
 const posts = [
@@ -28,11 +19,11 @@ const posts = [
         "Además, la interfaz debía ser fácil de aprender para cualquier empleado y permitir trabajar rápido aunque haya fila de clientes.",
       ],
       design: [
-        "Primero identifiqué las tareas más frecuentes en la caja y las organicé como botones grandes en la pantalla de inicio, cada uno con un ícono claro y una etiqueta, para que se reconozcan de un vistazo.",
-        "Usé colores cálidos (amarillo y verde) con imágenes de frutas y verduras para relacionar el sistema con la tienda, y destaqué con color las acciones principales: “Buscar producto” y “Nueva venta”. En la parte superior siempre se ve el usuario con su rol y el botón para cerrar sesión.",
+        "Primero identificamos las tareas más frecuentes en la caja y las organizamos como botones grandes en la pantalla de inicio, cada uno con un ícono claro y una etiqueta, para que se reconozcan fácilmente.",
+        "Usamos colores cálidos (amarillo y verde) con imágenes de frutas y verduras para relacionar el sistema con la tienda, y destacamos con color las acciones principales: “Buscar producto” y “Nueva venta”. En la parte superior siempre se ve el usuario con su rol y el botón para cerrar sesión.",
       ],
       implementation: [
-        "El diseño lo hice en Figma: armé las pantallas con marcos (frames) y usé componentes reutilizables para los botones e íconos, para que todo tuviera el mismo estilo.",
+        "El diseño lo realizamos en Figma: armamos las pantallas con marcos (frames) y se usaron componentes reutilizables para los botones e íconos, para que todo tuviera el mismo estilo.",
         "Por ahora es un diseño visual (mockup): los botones todavía no están conectados entre sí, así que el prototipo no se puede navegar haciendo clic. El siguiente paso sería enlazarlos en el modo Prototipo de Figma o programar la interfaz.",
       ],
       result: [
@@ -52,11 +43,11 @@ const posts = [
         "The interface also had to be easy for any employee to learn and let them work quickly even when there is a line of customers.",
       ],
       design: [
-        "First I identified the most frequent tasks at the register and arranged them as large buttons on the home screen, each with a clear icon and label so they can be recognized at a glance.",
-        "I used warm colors (yellow and green) with images of fruits and vegetables to connect the system with the store, and highlighted the main actions with color: “Search product” and “New sale”. The top bar always shows the user, their role and the log-out button.",
+        "First we identified the most frequent tasks at the register and arranged them as large buttons on the home screen, each with a clear icon and label so they can be recognized at a glance.",
+        "We used warm colors (yellow and green) with images of fruits and vegetables to connect the system with the store, and highlighted the main actions with color: “Search product” and “New sale”. The top bar always shows the user, their role and the log-out button.",
       ],
       implementation: [
-        "I made the design in Figma: I built the screens with frames and used reusable components for buttons and icons so everything shares the same style.",
+        "We made the design in Figma: we built the screens with frames and used reusable components for buttons and icons so everything shares the same style.",
         "For now it is a visual design (mockup): the buttons are not linked yet, so the prototype can't be navigated by clicking. The next step would be to link them in Figma's Prototype mode or to code the interface.",
       ],
       result: [
@@ -81,11 +72,11 @@ const posts = [
         "También pedía que el cliente pudiera identificar rápido información importante de cada platillo (si es nuevo, si es una opción saludable, si es sugerencia del chef o cuánto tarda en prepararse), ir armando su pedido y ajustar el tamaño de la vista para leer mejor.",
       ],
       design: [
-        "Elegí un estilo elegante que transmitiera la experiencia del restaurante: una fotografía de fondo de comida, tipografía caligráfica para los nombres de las categorías y tonos dorados y cafés.",
-        "Cada platillo se muestra en una tarjeta con su foto, nombre, precio y una flecha para ver más detalles. Diseñé un sistema de íconos con su leyenda (producto nuevo, opción saludable, sugerencia del chef y tiempo de preparación) y agregué una canasta con contador para el pedido, además de botones de acercar y alejar.",
+        "Elegimos un estilo elegante que transmitiera la experiencia del restaurante: una fotografía de fondo de comida, tipografía para los nombres de las categorías y tonos dorados y cafés.",
+        "Cada platillo se muestra en una tarjeta con su foto, nombre, precio y una flecha para ver más detalles. Diseñamos un sistema de íconos con su leyenda (producto nuevo, opción saludable, sugerencia del chef y tiempo de preparación) y agregamos una canasta con contador para el pedido, además de botones de acercar y alejar.",
       ],
       implementation: [
-        "Lo implementé en Figma: creé las pantallas de cada categoría y del detalle de los platillos, usé componentes para las tarjetas y los íconos para mantener un diseño consistente, y conecté todo en el modo Prototipo para que se pueda navegar haciendo clic.",
+        "Lo implementamos en Figma: creamos las pantallas de cada categoría y del detalle de los platillos, usamos componentes para las tarjetas y los íconos para mantener un diseño consistente, y conectamos todo en el modo Prototipo para que se pueda navegar haciendo clic.",
       ],
       result: [
         "El resultado es un prototipo interactivo de un menú digital que se puede recorrer como si fuera la aplicación real. Muestra cómo el diseño visual y los íconos ayudan al cliente a decidir qué pedir de forma más rápida y agradable.",
@@ -104,11 +95,11 @@ const posts = [
         "It also asked that customers could quickly spot key information about each dish (whether it's new, a healthy option, a chef's suggestion, or how long it takes to prepare), build their order as they go, and zoom the view in or out to read better.",
       ],
       design: [
-        "I chose an elegant style that conveys the restaurant experience: a food photograph as the background, calligraphic lettering for category names, and gold and brown tones.",
-        "Each dish is shown on a card with its photo, name, price and an arrow to see more details. I designed an icon system with a legend (new product, healthy option, chef's suggestion and preparation time) and added a basket with a counter for the order, plus zoom in and zoom out buttons.",
+        "We chose an elegant style that conveys the restaurant experience: a food photograph as the background, lettering for category names, and gold and brown tones.",
+        "Each dish is shown on a card with its photo, name, price and an arrow to see more details. We designed an icon system with a legend (new product, healthy option, chef's suggestion and preparation time) and added a basket with a counter for the order, plus zoom in and zoom out buttons.",
       ],
       implementation: [
-        "I implemented it in Figma: I created the screens for each category and for the dish details, used components for the cards and icons to keep the design consistent, and connected everything in Prototype mode so it can be navigated by clicking.",
+        "We implemented it in Figma: we created the screens for each category and for the dish details, we used components for the cards and icons to keep the design consistent, and we connected everything in Prototype mode so it can be navigated by clicking.",
       ],
       result: [
         "The result is an interactive digital menu prototype that can be explored as if it were the real app. It shows how visual design and icons help customers decide what to order faster and more pleasantly.",
